@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success"
+    (click)="newRecipe()">New Recipe</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div  class="col-xs-12">
+
+    <app-recipe-item *ngFor="let recipeItem of recipeList ; let i = index"
+    [recipe] = recipeItem
+    [index]="i"></app-recipe-item>
+
+    <!-- <app-recipe-item *ngFor="let recipeItem of recipeList"
+
+     [recipe] = recipeItem (contentEmmiter)="recipeEmmiter($event)
+
+    "></app-recipe-item> -->
+  </div>
+</div>
+
